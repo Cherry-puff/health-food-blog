@@ -1,2 +1,13 @@
-SELECT *
-FROM recip
+CREATE TABLE recipes (
+  id SERIAL PRIMARY KEY,
+  name VARCHAR(255) NOT NULL,
+  description TEXT,
+  ingredients TEXT NOT NULL,
+  instructions TEXT NOT NULL,
+  protein FLOAT NOT NULL,
+  fat FLOAT NOT NULL,
+  carbohydrates FLOAT NOT NULL,
+  source VARCHAR(255),
+  created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
